@@ -36,7 +36,6 @@ COPY scripts/concat_files.sh /opt/conda/envs/work/bin/concat_files.sh
 # Make the script executable
 RUN chmod +x /opt/conda/envs/work/bin/concat_files.sh
 
-EXPOSE 5003
 # Ensure the environment is activated on start
 ENTRYPOINT ["conda", "run", "--no-capture-output", "-n", "work", "bash", "-c"]
 CMD ["echo", "Environment work is activated!"]
